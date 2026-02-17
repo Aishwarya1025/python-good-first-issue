@@ -1,7 +1,11 @@
-s = input().strip()
-rev = ""
+# checking the palindrome of a number
 
-for ch in s:
-    rev = ch + rev
+def palindrome(num):
+    if num==0 or (num%10==0 and num!=0):  # checks if the number is not zero and it is not multiple of 10.
+        return False
 
-print("Palindrome" if s == rev else "Not Palindrome")
+    rev=0
+    while num > rev:
+        rev = rev*10+num%10  # adds the number in reverse order 
+        num=num//10          # decreases the number 
+    return num==rev or num==rev//10
