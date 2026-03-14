@@ -46,3 +46,16 @@ If you know basic Python and GitHub basics, you are good to go 👍
 - Proper commit message
 
 Example:
+
+Good Pull Request Example
+
+Title:
+Fix input validation in factorial.py
+
+Description:
+This pull request fixes issue #12 by adding input validation to ensure the user enters a non-negative integer.
+
+Changes Made:
+- Added validation for negative numbers
+- Added error message for invalid input
+- Improved comments for clarity
