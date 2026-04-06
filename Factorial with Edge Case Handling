@@ -1,11 +1,15 @@
+def factorial(number):
+    if number < 0:
+        return "Factorial not defined for negative numbers"
+
+    result = 1
+    for i in range(1, number + 1):
+        result *= i
+    return result
+
+
 try:
-    n = int(input())
-    if n < 0:
-        print("Factorial not defined for negative numbers")
-    else:
-        fact = 1
-        for i in range(1, n + 1):
-            fact *= i
-        print(fact)
+    number = int(input("Enter a number: "))
+    print(factorial(number))
 except ValueError:
-    print("Invalid input")
+    print("Invalid input! Please enter an integer.")
