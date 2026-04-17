@@ -1,7 +1,13 @@
-s = input().strip()
-rev = ""
+num = int(input("Enter a number: "))
+temp = num
+rev = 0
 
-for ch in s:
-    rev = ch + rev
+while num > 0:
+    digit = num % 10
+    rev = rev * 10 + digit
+    num = num // 10
 
-print("Palindrome" if s == rev else "Not Palindrome")
+if temp == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
