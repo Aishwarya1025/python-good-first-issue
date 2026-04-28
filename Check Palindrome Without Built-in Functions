@@ -1,7 +1,6 @@
-s = input().strip()
-rev = ""
+text = input("Enter a string: ").strip().lower()
 
-for ch in s:
-    rev = ch + rev
-
-print("Palindrome" if s == rev else "Not Palindrome")
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")

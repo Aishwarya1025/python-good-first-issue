@@ -1,8 +1,12 @@
-try:
-    n = int(input("Enter a number: "))
-    if n < 0:
-        print("Please enter a non-negative number")
-    else:
-        print("Valid input:", n)
-except ValueError:
-    print("Invalid input! Please enter an integer.")
+def get_non_negative_integer():
+    while True:
+        try:
+            n = int(input("Enter a non-negative integer: "))
+            if n >= 0:
+                return n
+            print("Number must be non-negative.")
+        except ValueError:
+            print("Invalid input! Please enter an integer.")
+
+num = get_non_negative_integer()
+print("Valid input:", num)
