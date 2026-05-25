@@ -1,7 +1,14 @@
-s = input().strip()
-rev = ""
+num = int(input("Enter a number: "))
 
-for ch in s:
-    rev = ch + rev
+original = num
+reverse = 0
 
-print("Palindrome" if s == rev else "Not Palindrome")
+while num > 0:
+    digit = num % 10        # Extract last digit
+    reverse = reverse * 10 + digit
+    num = num // 10         # Remove last digit
+
+if original == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
