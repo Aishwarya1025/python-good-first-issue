@@ -1,7 +1,12 @@
-s = input().strip()
-rev = ""
-
-for ch in s:
-    rev = ch + rev
-
-print("Palindrome" if s == rev else "Not Palindrome")
+print("Enter a string")
+s=input()
+l=0
+r=len(s)-1
+while l<r:
+    if s[l]!=s[r]:
+        print("String is not a palindrome")
+        break
+    l=l+1
+    r=r-1
+else:
+    print("String is a palindrome")
